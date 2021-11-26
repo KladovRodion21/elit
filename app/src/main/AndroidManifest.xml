@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.spotr">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Spotr">
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false"
+            android:label="@string/title_activity_menu" />
         <activity
             android:name=".RegActivity"
             android:exported="false" />
@@ -36,6 +42,5 @@
             android:name=".MainActivity"
             android:exported="true" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

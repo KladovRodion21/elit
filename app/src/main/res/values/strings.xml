@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Spotr</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_home">News</string>
+    <string name="title_dashboard">Список</string>
+    <string name="title_notifications">Добавить</string>
 </resources>
