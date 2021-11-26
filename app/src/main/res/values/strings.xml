@@ -4,4 +4,5 @@
     <string name="title_home">News</string>
     <string name="title_dashboard">Список</string>
     <string name="title_notifications">Добавить</string>
+    <string name="title_activity_memu">MemuActivity</string>
 </resources>

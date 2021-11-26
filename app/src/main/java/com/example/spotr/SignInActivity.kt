@@ -37,25 +37,8 @@ class SignInActivity : AppCompatActivity() {
     fun Login (view:android.view.View){
         if(email.text.isNotEmpty() && password.text.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(email.text).matches())
         {
-            val retrofit =MyRetrofit().getRetrofit().create(RetApi::class.java)
-            val hashMap: HashMap<String, String> = HashMap()
-            hashMap["email"] = email.text.toString()
-            hashMap["password"] = password.text.toString()
-            val call: Call<Login> = retrofit.login(hashMap)
-            call.enqueue((object: retrofit2.Callback<Login>{
-                override fun OnResponse(call: Call<Login>, response: Response<Login>){
-                    if (response.body()?.token!=null){
-                        Login.userToken = response.body()?.token
-                        Toast.makeText(this@SignInActivity,"Успешно", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this@SignInActivity,MainActivity::class.java))
-                        finish()
-                    }
-                    else{
+            startActivity(Intent(this@SignInActivity, MenuActivity::class.java))
 
-                    }
-                }
-            }))
-            startActivity(Intent(this@SignInActivity, MainActivity::class.java))
 
         }
         else AlertDialog.Builder(this@SignInActivity).setMessage("Неверные данные входа").show()

@@ -49,23 +49,29 @@
         android:layout_marginTop="79dp"
         android:layout_marginEnd="100dp"
         android:ems="10"
+        android:hint="email"
+        android:textColorHint="@color/black"
+        android:paddingStart="15dp"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <EditText
-        android:id="@+id/editTextTextPasswordreg"
+        android:id="@+id/editTextTextRepeatpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="100dp"
         android:ems="10"
+        android:hint="repeat password"
+        android:textColorHint="@color/black"
+        android:paddingStart="15dp"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextRepeatpass" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextpassreg" />
 
     <Button
         android:id="@+id/button2"
@@ -78,16 +84,19 @@
         android:onClick="registrations"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPasswordreg" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextRepeatpass" />
 
     <EditText
-        android:id="@+id/editTextTextRepeatpass"
+        android:id="@+id/editTextTextpassreg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="100dp"
         android:ems="10"
+        android:hint="password"
+        android:textColorHint="@color/black"
+        android:paddingStart="15dp"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -16,7 +16,7 @@ class RegActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reg)
-        password= findViewById(R.id.editTextTextPasswordreg)
+        password= findViewById(R.id.editTextTextpassreg)
         email= findViewById(R.id.editTextTextEmailAddressReg)
         repeatpass= findViewById(R.id.editTextTextRepeatpass)
     }
