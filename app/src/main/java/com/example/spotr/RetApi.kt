@@ -5,7 +5,7 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface RetApi {
-    @POST("auth/login")
+    @POST("user/login")
     fun login(@Body hashMap: HashMap<String, String>): Call<Login>
 
     @POST("auth/register")

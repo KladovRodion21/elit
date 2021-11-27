@@ -6,7 +6,10 @@ import android.os.Bundle
 import android.util.Patterns
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import retrofit2.Call
+import retrofit2.Response
 
 class RegActivity : AppCompatActivity() {
     lateinit var email: EditText
@@ -20,15 +23,19 @@ class RegActivity : AppCompatActivity() {
         email= findViewById(R.id.editTextTextEmailAddressReg)
         repeatpass= findViewById(R.id.editTextTextRepeatpass)
     }
-    fun registrations (view:android.view.View){
-        if(email.text.isNotEmpty() && password.text.isNotEmpty()&&repeatpass.text.isNotEmpty()&&repeatpass==password && Patterns.EMAIL_ADDRESS.matcher(email.text).matches())
-        {
-            startActivity(Intent(this@RegActivity, SignInActivity::class.java))
+    fun registrations (view:android.view.View) {
+        if (email.text.isNotEmpty() && password.text.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(email.text).matches() ) {
+            Toast.makeText(this, "Успешная регистрация",Toast.LENGTH_SHORT).show()
 
         }
-        else AlertDialog.Builder(this@RegActivity).setMessage("Неверные данные регистрации").show()
-    }
-    fun back(view:android.view.View){
-        startActivity(Intent(this@RegActivity, SignInActivity::class.java))
+        else{
+
+            val alert = AlertDialog.Builder(this,)
+                .setTitle("Ошибка")
+                .setMessage("Заполните все поля")
+                .setPositiveButton("ОК",null)
+                .create()
+                .show()
+        }
     }
 }
