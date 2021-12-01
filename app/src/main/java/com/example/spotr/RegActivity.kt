@@ -13,7 +13,7 @@ import retrofit2.Call
 import retrofit2.Response
 
 class RegActivity : AppCompatActivity() {
-    lateinit var name: EditText
+    lateinit var Name: EditText
     lateinit var email: EditText
     lateinit var password: EditText
     lateinit var repeatpass: EditText
@@ -24,18 +24,18 @@ class RegActivity : AppCompatActivity() {
         password = findViewById(R.id.editTextTextPasswordReg)
         email = findViewById(R.id.editTextTextEmailAddressReg)
         repeatpass = findViewById(R.id.editTextTextPasswordRegRepeat)
-        name = findViewById(R.id.editTextTextPersonName)
+        Name = findViewById(R.id.editTextTextPersonName)
     }
 
 
         fun regi(view: View) {
-            if (email.text.isNotEmpty() && name.text.isNotEmpty()  && password.text.isNotEmpty() && repeatpass.text.isNotEmpty()) {
+            if (email.text.isNotEmpty() && Name.text.isNotEmpty()  && password.text.isNotEmpty() && repeatpass.text.isNotEmpty()) {
                 if (password.text.toString() == repeatpass.text.toString()) {
                     val retrofit = MyRetrofit().getRetrofit().create(RetApi::class.java)
                     val hashMap: HashMap<String, String> = HashMap<String, String>()
                     hashMap["email"] = email.text.toString()
                     hashMap["password"] = password.text.toString()
-                    hashMap["firstName"] = name.text.toString()
+                    hashMap["firstName"] = Name.text.toString()
                     val call: Call<Void> = retrofit.registration(hashMap)
                     call.enqueue(object : retrofit2.Callback<Void> {
                         override fun onResponse(call: Call<Void>, response: Response<Void>) {
