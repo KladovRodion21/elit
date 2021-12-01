@@ -1,6 +1,7 @@
-package com.example.spotr
+package com.example.spotr.db
 
 
+import com.example.spotr.db.Login
 import retrofit2.Call
 import retrofit2.http.*
 

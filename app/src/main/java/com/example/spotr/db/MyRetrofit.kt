@@ -1,4 +1,4 @@
-package com.example.spotr
+package com.example.spotr.db
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
